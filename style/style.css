@@ -1,0 +1,138 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------FIRST PAGE-----------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+#firstpage {
+    width: 100%;
+    height: 100vh;
+}
+/*-------------------------------------------------------------------------- HEADER -----------------------------------------------------------------------------------------*/
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 15vh;
+    background-color: white;
+    padding: 30px 60px;
+    box-sizing: border-box;
+}
+img {
+    flex-basis: auto;
+}
+div.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60%;
+}
+div.nav li {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+#nav_button {
+    display: none;
+}
+div.nav li a {
+    width: max-content;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgba(0,0,0, 0.6);
+    transition: all 1.5s;
+}
+div.nav li a:after {
+    content: "";
+    display:block;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transform: scaleX(0);
+    transition: all 0.3s;   
+}
+
+div.nav li a:hover::after {
+    transform: scaleX(1);
+}
+
+div.nav li a:hover {
+    color: rgba(0,0,0);
+}
+
+
+@media (max-width:1000px) {
+    div.nav li a{
+        display: none;
+    }
+    #nav_button {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        border: 3px solid rgba(0,0,0,0.3);
+        border-radius: 20px;
+        position: relative;
+    }
+    #nav_button div.stick1 {
+        position: absolute;
+        top:3px;
+        left:8px;
+        width: 75%;
+        height: 3px;
+        background-color: black;
+        margin: 10px 0px;
+    }
+    #nav_button div.stick2 {
+        position: absolute;
+        top:19px;
+        left:8px;
+        width: 75%;
+        height: 3px;
+        background-color: black;
+        margin: 10px 0px;
+    }
+    #nav_button div.stick3 {
+        position: absolute;
+        bottom: 2px;
+        left:8px;
+        width: 75%;
+        height: 3px;
+        background-color: black;
+        margin: 10px 0px;
+    }
+}
+
+/*-------------------------------------------------------------------------- MAINPART -----------------------------------------------------------------------------------------*/
+#firstpage div.parttwo {
+    width: 100%;
+    height: 85vh;
+    box-sizing: border-box;
+    padding: 10% 13%;
+    background-image:linear-gradient(180deg,rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("https://rocketman.learnwagtail.com/media/images/spacex-OHOU-5UVIYQ-unsplash.2e16d0ba.fill-786x552.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat; 
+}
+
+#firstpage div.parttwo h1{
+    color:white;
+    font-size: 3.5em;
+    padding: 20px 0px;
+}
+#firstpage div.parttwo h3 {
+    color:white;
+    font-size: 2em;
+}
+button.CONTACT {
+    width: 150px;
+    height: 6vh;
+    border-radius: 30px;
+    text-align: center;
+    transform: scale(1);
+    transition: all 1.5s;
+}
+button.CONTACT:hover {
+    transform: scale(1.2);
+}
